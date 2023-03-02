@@ -1098,7 +1098,7 @@ pheatmap = function(mat, color = colorRampPalette(rev(brewer.pal(n = 7, name = "
     #     grid.draw(gt)
     # }
     
-    # invisible(structure(list(tree_row = tree_row, tree_col = tree_col, kmeans = km, gtable = gt), class = "pheatmap"))
+    gt <- invisible(structure(list(tree_row = tree_row, tree_col = tree_col, kmeans = km, gtable = gt), class = "pheatmap"))
     return(gt)
 }
 
