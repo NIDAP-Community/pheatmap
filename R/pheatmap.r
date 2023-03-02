@@ -415,7 +415,7 @@ heatmap_motor = function(matrix, border_color, cellwidth, cellheight, tree_col, 
         f(filename, height = height, width = width)
         gt = heatmap_motor(matrix, cellwidth = cellwidth, cellheight = cellheight, border_color = border_color, tree_col = tree_col, tree_row = tree_row, treeheight_col = treeheight_col, treeheight_row = treeheight_row, breaks = breaks, color = color, legend = legend, annotation_col = annotation_col, annotation_row = annotation_row, annotation_colors = annotation_colors, annotation_legend = annotation_legend, annotation_names_row = annotation_names_row, annotation_names_col = annotation_names_col, filename = NA, main = main, fontsize = fontsize, fontsize_row = fontsize_row, fontsize_col = fontsize_col, hjust_col = hjust_col, vjust_col = vjust_col, angle_col = angle_col, fmat = fmat, fontsize_number =  fontsize_number, number_color = number_color, labels_row = labels_row, labels_col = labels_col, gaps_col = gaps_col, gaps_row = gaps_row, ...)
         grid.draw(gt)
-        dev.off()
+        #dev.off()
         
         return(gt)
     }
@@ -1091,7 +1091,7 @@ pheatmap = function(mat, color = colorRampPalette(rev(brewer.pal(n = 7, name = "
     # Draw heatmap
     pdf(file = NULL)
     gt = heatmap_motor(mat, border_color = border_color, cellwidth = cellwidth, cellheight = cellheight, treeheight_col = treeheight_col, treeheight_row = treeheight_row, tree_col = tree_col, tree_row = tree_row, filename = filename, width = width, height = height, breaks = breaks, color = color, legend = legend, annotation_row = annotation_row, annotation_col = annotation_col, annotation_colors = annotation_colors, annotation_legend = annotation_legend, annotation_names_row = annotation_names_row, annotation_names_col = annotation_names_col, main = main, fontsize = fontsize, fontsize_row = fontsize_row, fontsize_col = fontsize_col, hjust_col = hjust_col, vjust_col = vjust_col, angle_col = angle_col, fmat = fmat, fontsize_number = fontsize_number, number_color = number_color, gaps_row = gaps_row, gaps_col = gaps_col, labels_row = labels_row, labels_col = labels_col, ...)
-    dev.off()
+    #dev.off()
     
     if(is.na(filename) & !silent){
         grid.newpage()
